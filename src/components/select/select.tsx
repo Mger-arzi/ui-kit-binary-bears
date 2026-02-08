@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import s from './select.module.scss'
 
 import { IconArrowIosBack } from '../../assets/icons/components'
-import {  type ComponentRef, forwardRef, type ReactNode } from 'react'
+import { type ComponentRef, forwardRef, type ReactNode } from 'react'
 
 export type Options = {
   icon?: ReactNode

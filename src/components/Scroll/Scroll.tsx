@@ -10,15 +10,8 @@ type ScrollAreaBaseProps = ComponentPropsWithoutRef<typeof ScrollArea.Root> & {
 export const ScrollAreaBase = forwardRef<HTMLDivElement, ScrollAreaBaseProps>(
   ({ children, className, type = 'hover', ...props }, ref) => {
     return (
-      <ScrollArea.Root
-        ref={ref}
-        type={type}
-        className={clsx(s.root, className)}
-        {...props}
-      >
-        <ScrollArea.Viewport className={s.viewport}>
-          {children}
-        </ScrollArea.Viewport>
+      <ScrollArea.Root ref={ref} type={type} className={clsx(s.root, className)} {...props}>
+        <ScrollArea.Viewport className={s.viewport}>{children}</ScrollArea.Viewport>
 
         <ScrollArea.Scrollbar orientation="vertical" className={s.scrollbar}>
           <ScrollArea.Thumb className={s.thumb} />

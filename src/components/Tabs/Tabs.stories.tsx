@@ -8,9 +8,21 @@ const sampleTabs: TabItem[] = [
 ]
 
 const disabledTabs: TabItem[] = [
-  { id: 'tab1', label: 'Tab 1', content: 'Content for Tab 1', variantStyle: 'primary', disabled: true },
+  {
+    id: 'tab1',
+    label: 'Tab 1',
+    content: 'Content for Tab 1',
+    variantStyle: 'primary',
+    disabled: true,
+  },
   { id: 'tab2', label: 'Tab 2', content: 'Content for Tab 2', variantStyle: 'primary' },
-  { id: 'tab3', label: 'Tab 3', content: 'Content for Tab 3', variantStyle: 'secondary', disabled: true },
+  {
+    id: 'tab3',
+    label: 'Tab 3',
+    content: 'Content for Tab 3',
+    variantStyle: 'secondary',
+    disabled: true,
+  },
 ]
 
 const meta = {
@@ -26,7 +38,6 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-
 export const Default: Story = {
   args: {
     tabs: sampleTabs,
@@ -39,8 +50,6 @@ export const Active: Story = {
     defaultActiveId: 'tab2',
   },
 }
-
-
 
 export const Disabled: Story = {
   args: {

@@ -22,9 +22,7 @@ export const Default: Story = {
 export const WithContent: Story = {
   render: () => (
     <Card>
-      <p style={{ margin: 0, padding: '16px', color: 'white' }}>
-        Card content
-      </p>
+      <p style={{ margin: 0, padding: '16px', color: 'white' }}>Card content</p>
     </Card>
   ),
 }

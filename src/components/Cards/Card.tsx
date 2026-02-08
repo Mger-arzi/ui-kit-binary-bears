@@ -6,11 +6,7 @@ type CardProps<T extends ElementType = 'div'> = {
   as?: T
 } & ComponentPropsWithoutRef<T>
 
-export const Card = <T extends ElementType = 'div'>({
-  as,
-  className,
-  ...rest
-}: CardProps<T>) => {
+export const Card = <T extends ElementType = 'div'>({ as, className, ...rest }: CardProps<T>) => {
   const Component = as ?? 'div'
 
   return <Component className={clsx(s.root, className)} {...rest} />

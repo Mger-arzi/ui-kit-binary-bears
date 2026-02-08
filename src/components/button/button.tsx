@@ -1,4 +1,4 @@
-import  { type ComponentPropsWithoutRef, type ReactNode } from 'react'
+import { type ComponentPropsWithoutRef, type ReactNode } from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import clsx from 'clsx'
 
@@ -11,18 +11,17 @@ type ButtonOwnProps = {
   fullWidth?: boolean
   disabled?: boolean
   variant?: 'primary' | 'secondary' | 'outline' | 'textButton' | 'asLink'
-  // size?: 'sm' | 'md' 
+  // size?: 'sm' | 'md'
 }
 
-export type ButtonProps = ButtonOwnProps &
-  ComponentPropsWithoutRef<'button'>
+export type ButtonProps = ButtonOwnProps & ComponentPropsWithoutRef<'button'>
 
 export const Button = ({
   asChild = false,
   className,
   fullWidth,
   variant = 'primary',
-  // size = 'md', 
+  // size = 'md',
   //disabled,
   ...rest
 }: ButtonProps) => {
@@ -31,7 +30,7 @@ export const Button = ({
   const classes = clsx(
     s.button,
     s[variant],
-    // s[size], 
+    // s[size],
     fullWidth && s.fullWidth,
     className
   )

@@ -15,17 +15,9 @@ type TabsProps = {
   defaultActiveId?: string | null
 } & ComponentPropsWithoutRef<typeof TabsPrimitive.Root>
 
-export default function Tabs({
-  tabs,
-  defaultActiveId = null,
-  ...rest
-}: TabsProps) {
+export default function Tabs({ tabs, defaultActiveId = null, ...rest }: TabsProps) {
   return (
-    <TabsPrimitive.Root 
-      defaultValue={defaultActiveId ?? undefined} 
-      className={s.tabs}
-      {...rest}
-    >
+    <TabsPrimitive.Root defaultValue={defaultActiveId ?? undefined} className={s.tabs} {...rest}>
       <TabsPrimitive.List className={s.tabsHeader}>
         {tabs.map(tab => (
           <TabsPrimitive.Trigger
@@ -40,11 +32,7 @@ export default function Tabs({
       </TabsPrimitive.List>
 
       {tabs.map(tab => (
-        <TabsPrimitive.Content
-          key={tab.id}
-          value={tab.id}
-          className={s.content}
-        >
+        <TabsPrimitive.Content key={tab.id} value={tab.id} className={s.content}>
           {tab.content}
         </TabsPrimitive.Content>
       ))}
